@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FirstExample</string>
+
+    <string name="hello_world">Hola</string>
+    <string name="action_settings">Settings</string>
+    <string name="name_me">Ricardo</string>
+    <string name="clic">Clic</string>
+    <string name="title">Nuevo Vocho</string>
+    <string name="motor">Motor 1.6 lt</string>
+    <string name="transmision">Transmision Manual</string>
+    <string name="equipment">Equipo A/C, Estereo USB, AUx</string>
+
+</resources>
