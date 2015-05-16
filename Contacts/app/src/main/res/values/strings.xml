@@ -11,4 +11,5 @@
     <string name="email">Email: ricardo.celj@gmail.com</string>
     <string name="github_user">Github: rickstart</string>
     <string name="twitter_user">Twitter: @rickstart</string>
+    <string name="back"><![CDATA[<--]]></string>
 </resources>
