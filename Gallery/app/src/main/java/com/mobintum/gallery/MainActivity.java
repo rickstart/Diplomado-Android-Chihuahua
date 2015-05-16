@@ -1,8 +1,7 @@
 package com.mobintum.gallery;
 
-import android.graphics.drawable.Drawable;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,11 +34,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     }
 
-    public Drawable getDrawable(String name){
-        int resourceId = getResources().getIdentifier(name,"drawable",getApplicationContext().getPackageName());
-        Drawable drawable = getResources().getDrawable(resourceId);
-        return drawable;
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
