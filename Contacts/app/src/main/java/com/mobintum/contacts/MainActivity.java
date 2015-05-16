@@ -8,6 +8,13 @@ import android.view.MenuItem;
 
 public class MainActivity extends ActionBarActivity {
 
+
+    final Contact santos = new Contact("Santos Benavides", "Observatorio", "Chihuahua","4132471","sbenavi@gmail.com","sbenavi","@sbenavilee");
+    final Contact eduardo = new Contact("Eduardo Garcia", "Observatorio","Chihuahua","4100838","eduardo.garciao@outlook.com","lalogarcia","@lalogarcias");
+    final Contact ricardo = new Contact("Ricardo Centeno", "Mobintum", "CD MX", "5514382887","ricardo.celj@gmail.com", "rickstart", "@rickstart");
+
+    final Contact[] contacts = {santos,eduardo,ricardo};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
