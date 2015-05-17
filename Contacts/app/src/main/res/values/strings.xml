@@ -12,4 +12,5 @@
     <string name="github_user">Github:</string>
     <string name="twitter_user">Twitter:</string>
     <string name="back"><![CDATA[<--]]></string>
+    <string name="next"><![CDATA[-->]]></string>
 </resources>

@@ -43,6 +43,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         btnBack.setOnClickListener(this);
         btnNext.setOnClickListener(this);
 
+        loadData();
+
 
 
     }
@@ -98,14 +100,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         String label;
         Contact contact = contacts[position];
 
-
         txtName.setText(contact.getName());
         txtCompany.setText(contact.getCompany());
+        txtCity.setText(contact.getCity());
 
         label = getResources().getString(R.string.email);
         txtEmail.setText(label+" "+contact.getEmail());
         label = getResources().getString(R.string.tel);
         txtPhone.setText(label+" "+contact.getPhone());
+        label = getResources().getString(R.string.github_user);
+        txtGit.setText(label+" "+contact.getGithub());
+        label = getResources().getString(R.string.tel);
+        txtTwitter.setText(label+" "+contact.getTwitter());
 
     }
 }
