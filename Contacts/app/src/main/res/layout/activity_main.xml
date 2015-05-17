@@ -23,7 +23,8 @@
                 android:layout_weight="1"
                 android:contentDescription="@string/img_description"
                 android:scaleType="fitCenter"
-                android:src="@mipmap/me_icecream"/>
+                android:src="@mipmap/ic_contact"
+                android:id="@+id/imgProfile"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -37,19 +38,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/font_medium"
-                    android:text="@string/my_name"/>
+                    android:text="@string/my_name"
+                    android:id="@+id/txtName"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/font_medium"
-                    android:text="@string/my_company"/>
+                    android:text="@string/my_company"
+                    android:id="@+id/txtCompany"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/font_medium"
-                    android:text="@string/my_city"/>
+                    android:text="@string/my_city"
+                    android:id="@+id/txtCity"/>
 
             </LinearLayout>
 
@@ -59,23 +63,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_medium"
-            android:text="@string/tel"/>
+            android:text="@string/tel"
+            android:id="@+id/txtPhone"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_medium"
-            android:text="@string/email"/>
+            android:text="@string/email"
+            android:id="@+id/txtEmail"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_medium"
-            android:text="@string/github_user"/>
+            android:text="@string/github_user"
+            android:id="@+id/txtGit"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_medium"
-            android:text="@string/twitter_user"/>
+            android:text="@string/twitter_user"
+            android:id="@+id/txtTwitter"/>
 
     </LinearLayout>
 
