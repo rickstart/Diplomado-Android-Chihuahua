@@ -95,8 +95,17 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     }
 
     public void loadData(){
+        String label;
+        Contact contact = contacts[position];
 
 
+        txtName.setText(contact.getName());
+        txtCompany.setText(contact.getCompany());
+
+        label = getResources().getString(R.string.email);
+        txtEmail.setText(label+" "+contact.getEmail());
+        label = getResources().getString(R.string.tel);
+        txtPhone.setText(label+" "+contact.getPhone());
 
     }
 }

@@ -7,9 +7,9 @@
     <string name="my_company">Mobintum</string>
     <string name="my_city">CD MX</string>
     <string name="img_description">default</string>
-    <string name="tel">Tel: 55 14382887</string>
-    <string name="email">Email: ricardo.celj@gmail.com</string>
-    <string name="github_user">Github: rickstart</string>
-    <string name="twitter_user">Twitter: @rickstart</string>
+    <string name="tel">Tel:</string>
+    <string name="email">Email:</string>
+    <string name="github_user">Github:</string>
+    <string name="twitter_user">Twitter:</string>
     <string name="back"><![CDATA[<--]]></string>
 </resources>
