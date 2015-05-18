@@ -2,6 +2,7 @@ package com.mobintum.calculator;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -106,8 +107,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     oper2 = Double.valueOf(txtResult.getText().toString());
                     double result = operation(operation,oper1,oper2);
                     String sresult = Double.toString(result);
-                    sresult = sresult.replace(".0","");
-                    txtResult.setText(sresult);
+                    if((result -(int) result)!=0)
+                        txtResult.setText(sresult);
+                    else {
+                        sresult = sresult.replace(".0", "");
+                        txtResult.setText(sresult);
+                    }
                     oper2 = 0.0;
                     oper1 = result;
                     flag = false;
@@ -184,6 +189,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     oper1 = Double.valueOf(txtResult.getText().toString());
                     flag = false;
 
+
                 }else if(oper2==0.0 && flag){
                     oper2 = Double.valueOf(txtResult.getText().toString());
 
@@ -196,15 +202,45 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 operation = Constants.PLUS;
                 break;
 
+            case R.id.btnPercent:
+                double  percent = Double.valueOf(txtResult.getText().toString());
+                percent = percent/100;
+                txtResult.setText(Double.toString(percent));
+                oper2 = 0.0;
+                oper1 = 0.0;
+                flag = false;
+                break;
+
+            case R.id.btnSign:
+                String sign = txtResult.getText().toString();
+                if(!sign.equals("")) {
+                    if(sign.contains("-")) {
+                        Log.e("IF",sign);
+                        sign = sign.replace("-", "");
+                    }
+                    else {
+                        Log.e("ELSE",sign);
+                        sign = "-" + sign;
+
+                    }
+
+                    if(oper1!=0.0)
+                        oper1 = Double.valueOf(sign);
+                    txtResult.setText(sign);
+                }
+                break;
+
             default:
                 Button btnTemp = (Button) findViewById(v.getId());
                 String number = txtResult.getText().toString();
+
+
 
                 if(flag) {
                     if(v.getId()==R.id.btnDot && !number.contains("."))
                         txtResult.append(btnTemp.getText());
 
-                    if(v.getId()!=R.id.btnDot)
+                    if(v.getId()!=R.id.btnDot && !number.substring(0).equals("0"))
                         txtResult.append(btnTemp.getText());
                 }else{
                     txtResult.setText(btnTemp.getText());
@@ -237,7 +273,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case Constants.MULTIPLY:
                 result = oper1 * oper2;
                 break;
-            default:
+            case 0:
                 result = oper2;
                 break;
 

@@ -1,7 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@android:color/black">
 
     <TextView
         android:layout_width="match_parent"
@@ -11,7 +12,8 @@
         android:textSize="@dimen/font_big"
         android:gravity="right"
         android:layout_gravity="center"
-        android:padding="@dimen/padding_medium"/>
+        android:padding="@dimen/padding_medium"
+        android:textColor="@android:color/white"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +27,8 @@
             android:layout_weight="1"
             android:text="@string/AC"
             android:id="@+id/btnAC"
-            android:textSize="@dimen/font_medium"/>
+            android:textSize="@dimen/font_medium"
+            android:background="@color/orange_custom"/>
 
         <Button
             android:layout_width="0dp"
@@ -33,21 +36,24 @@
             android:layout_weight="1"
             android:text="@string/sign"
             android:id="@+id/btnSign"
-            android:textSize="@dimen/font_medium"/>
+            android:textSize="@dimen/font_medium"
+            android:background="@color/orange_custom"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/percent"
             android:id="@+id/btnPercent"
-            android:textSize="@dimen/font_medium"/>
+            android:textSize="@dimen/font_medium"
+            android:background="@color/orange_custom"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/division"
             android:id="@+id/btnDivision"
-            android:textSize="@dimen/font_medium"/>
+            android:textSize="@dimen/font_medium"
+            android:background="@color/orange_custom"/>
 
 
     </LinearLayout>
@@ -85,7 +91,8 @@
             android:layout_weight="1"
             android:text="@string/multiply"
             android:id="@+id/btnMultiply"
-            android:textSize="@dimen/font_medium"/>
+            android:textSize="@dimen/font_medium"
+            android:background="@color/orange_custom"/>
 
 
     </LinearLayout>
@@ -124,7 +131,8 @@
             android:layout_weight="1"
             android:text="@string/less"
             android:id="@+id/btnLess"
-            android:textSize="@dimen/font_medium"/>
+            android:textSize="@dimen/font_medium"
+            android:background="@color/orange_custom"/>
 
 
     </LinearLayout>
@@ -163,7 +171,8 @@
             android:layout_weight="1"
             android:text="@string/plus"
             android:id="@+id/btnPlus"
-            android:textSize="@dimen/font_medium"/>
+            android:textSize="@dimen/font_medium"
+            android:background="@color/orange_custom"/>
 
 
     </LinearLayout>
@@ -195,7 +204,8 @@
             android:layout_weight="1"
             android:text="@string/equal"
             android:id="@+id/btnEqual"
-            android:textSize="@dimen/font_medium"/>
+            android:textSize="@dimen/font_medium"
+            android:background="@color/orange_custom"/>
 
 
 
