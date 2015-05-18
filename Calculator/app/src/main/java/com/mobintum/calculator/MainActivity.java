@@ -99,16 +99,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         switch (v.getId()){
 
 
-            case R.id.btnDot:
-
-                String number = txtResult.getText().toString();
-                if(!number.contains(".")){
-                    txtResult.append(".");
-                    flag = true;
-
-                }
-                break;
-
             case R.id.btnEqual:
 
                 if(oper1 != 0.0 && flag){
@@ -121,6 +111,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     oper2 = 0.0;
                     oper1 = result;
                     flag = false;
+                    operation = 0;
 
                 }
 
@@ -207,9 +198,14 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
             default:
                 Button btnTemp = (Button) findViewById(v.getId());
+                String number = txtResult.getText().toString();
 
                 if(flag) {
-                    txtResult.append(btnTemp.getText());
+                    if(v.getId()==R.id.btnDot && !number.contains("."))
+                        txtResult.append(btnTemp.getText());
+
+                    if(v.getId()!=R.id.btnDot)
+                        txtResult.append(btnTemp.getText());
                 }else{
                     txtResult.setText(btnTemp.getText());
                     flag = true;
@@ -240,6 +236,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case Constants.MULTIPLY:
                 result = oper1 * oper2;
+                break;
+            default:
+                result = oper2;
                 break;
 
         }
