@@ -16,9 +16,9 @@ public class MainActivity extends ActionBarActivity {
 
     private ArrayList<Contact> contacts = new ArrayList<Contact>();
 
-    final Contact santos = new Contact("Santos Benavides", "Observatorio", "Chihuahua","4132471","sbenavi@gmail.com","sbenavi","@sbenavilee", R.mipmap.pic_santos);
-    final Contact eduardo = new Contact("Eduardo Garcia", "Observatorio","Chihuahua","4100838","eduardo.garciao@outlook.com","lalogarcia","@lalogarcias",R.mipmap.pic_lalo);
-    final Contact ricardo = new Contact("Ricardo Centeno", "Mobintum", "CD MX", "5514382887","ricardo.celj@gmail.com", "rickstart", "@rickstart", R.mipmap.pic_ricardo);
+    final Contact santos = new Contact("Santos Benavides", "Observatorio", "Chihuahua","4132471","sbenavi@gmail.com","sbenavi","sbenavilee", R.mipmap.pic_santos);
+    final Contact eduardo = new Contact("Eduardo Garcia", "Observatorio","Chihuahua","4100838","eduardo.garciao@outlook.com","lalogarcia","lalogarcias",R.mipmap.pic_lalo);
+    final Contact ricardo = new Contact("Ricardo Centeno", "Mobintum", "CD MX", "5514382887","ricardo.celj@gmail.com", "rickstart", "rickstart", R.mipmap.pic_ricardo);
 
     private ListView listContacts;
 
