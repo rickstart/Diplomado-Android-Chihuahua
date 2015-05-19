@@ -1,9 +1,11 @@
 package com.mobintum.listcontacts;
 
+import java.io.Serializable;
+
 /**
  * Created by Rick on 18/05/15.
  */
-public class Contact {
+public class Contact implements Serializable {
 
     private String name;
     private String company;

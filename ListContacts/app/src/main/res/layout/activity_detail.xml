@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:paddingBottom="@dimen/activity_vertical_margin"
+tools:context="com.mobintum.listcontacts.DetailActivity">
+
+    <LinearLayout  android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:orientation="vertical">
+
+            <com.mobintum.listcontacts.RoundedImageView
+            android:layout_width="@dimen/photo"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:contentDescription="@string/img_description"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/pic_ricardo"
+            android:id="@+id/imgProfile"
+            android:layout_gravity="center"/>
+
+
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding_small">
+
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/my_name"
+                android:id="@+id/txtName"
+                android:gravity="center"/>
+
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/my_company"
+                android:id="@+id/txtCompany"
+                android:gravity="center"/>
+
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_medium"
+                android:text="@string/my_city"
+                android:id="@+id/txtCity"
+                android:gravity="center"/>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                            <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small">
+                                <ImageButton
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/ic_phone"
+                                android:background="@android:color/transparent"
+                                android:id="@+id/btnPhone"/>
+
+                                <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/font_medium"
+                                android:text="@string/tel"
+                                android:id="@+id/txtPhone"
+                                android:layout_gravity="center"
+                                android:layout_weight="2"/>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small">
+                                <ImageButton
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/ic_email"
+                                android:background="@android:color/transparent"
+                                android:id="@+id/btnEmail"/>
+
+                                <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/font_medium"
+                                android:text="@string/email"
+                                android:id="@+id/txtEmail"
+                                android:layout_weight="2"/>
+                            </LinearLayout>
+                            <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small">
+                                <ImageButton
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/ic_github"
+                                android:background="@android:color/transparent"
+                                android:id="@+id/btnGithub"/>
+
+                                <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/font_medium"
+                                android:text="@string/github_user"
+                                android:id="@+id/txtGit"
+                                android:layout_weight="2"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_small">
+                                <ImageButton
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/ic_twitter"
+                                android:background="@android:color/transparent"
+                                android:id="@+id/btnTwitter"/>
+                                <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/font_medium"
+                                android:text="@string/twitter_user"
+                                android:id="@+id/txtTwitter"
+                                android:layout_weight="2"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
