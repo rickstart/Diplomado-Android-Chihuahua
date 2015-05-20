@@ -10,13 +10,15 @@ public class Song {
     private String album;
     private String fileName;
     private int albumPoster;
+    private String time;
 
-    public Song(String title, String artist, String album, String fileName, int albumPoster) {
+    public Song(String title, String artist, String album, String fileName, int albumPoster, String time) {
         this.title = title;
         this.artist = artist;
         this.album = album;
         this.fileName = fileName;
         this.albumPoster = albumPoster;
+        this.time = time;
     }
 
     public String getTitle() {
@@ -57,5 +59,13 @@ public class Song {
 
     public void setAlbumPoster(int albumPoster) {
         this.albumPoster = albumPoster;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }
