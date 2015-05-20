@@ -1,9 +1,11 @@
 package com.mobintum.musicplayer;
 
+import java.io.Serializable;
+
 /**
  * Created by Rick on 20/05/15.
  */
-public class Song {
+public class Song implements Serializable{
 
     private String title;
     private String artist;
