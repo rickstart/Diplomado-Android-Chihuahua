@@ -1,8 +1,8 @@
 package com.mobintum.musicplayer;
 
 import android.media.MediaPlayer;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,16 +14,20 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class DetailActivity extends ActionBarActivity implements View.OnClickListener {
+public class DetailActivity extends ActionBarActivity implements View.OnClickListener, Runnable {
 
     private ArrayList<Song> songs;
     private int position;
     private ImageView imgAlbumDetail;
-    private TextView txtTitleDetail, txtArtistDetail, txtAlbumDetail, txtTimeDetail;
+    private TextView txtTitleDetail, txtArtistDetail, txtAlbumDetail, txtTimeDetail, txtTimeProgress;
     private ProgressBar progressBarTime;
     private ImageButton btnBack, btnNext, btnPlay;
     private MediaPlayer mPlayer;
     private boolean playing = true;
+    private Thread thread;
+    int seconds;
+    int minutes;
+    int hours;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,8 @@ public class DetailActivity extends ActionBarActivity implements View.OnClickLis
         txtArtistDetail = (TextView) findViewById(R.id.txtArtistDetail);
         txtAlbumDetail = (TextView) findViewById(R.id.txtAlbumDetail);
         txtTimeDetail = (TextView) findViewById(R.id.txtTimeDetail);
+        txtTimeProgress = (TextView) findViewById(R.id.txtTimeProgress);
+
         progressBarTime = (ProgressBar) findViewById(R.id.progressBarTime);
         btnBack = (ImageButton) findViewById(R.id.btnBack);
         btnPlay = (ImageButton) findViewById(R.id.btnPlay);
@@ -48,6 +54,7 @@ public class DetailActivity extends ActionBarActivity implements View.OnClickLis
         btnBack.setOnClickListener(this);
         btnPlay.setOnClickListener(this);
         btnNext.setOnClickListener(this);
+        thread = new Thread(this);
 
         loadData();
 
@@ -92,6 +99,10 @@ public class DetailActivity extends ActionBarActivity implements View.OnClickLis
                         getResources().getIdentifier("raw/"+song.getFileName(),
                         "raw",
                         getPackageName()));
+
+        progressBarTime.setVisibility(ProgressBar.VISIBLE);
+        progressBarTime.setProgress(0);
+        progressBarTime.setMax(mPlayer.getDuration());
     }
 
     @Override
@@ -103,8 +114,10 @@ public class DetailActivity extends ActionBarActivity implements View.OnClickLis
     public void play(){
         if(playing) {
             btnPlay.setImageResource(R.mipmap.btn_pause);
-
             mPlayer.start();
+            if(thread.getState() != Thread.State.TIMED_WAITING){
+                thread.start();
+            }
             playing=false;
         }else{
             mPlayer.pause();
@@ -147,4 +160,45 @@ public class DetailActivity extends ActionBarActivity implements View.OnClickLis
 
 
     }
+
+    @Override
+    public void run() {
+        int currentPosition = 0;
+        int total = mPlayer.getDuration();
+        while(mPlayer!=null && currentPosition<total){
+            try{
+                Thread.sleep(1000);
+                currentPosition = mPlayer.getCurrentPosition();
+                seconds = (currentPosition / 1000) % 60;
+                minutes = (currentPosition / (1000 * 60)) % 60;
+                hours = (currentPosition / (1000*60*60)) % 60;
+
+
+                runOnUiThread( new Runnable() {
+                    @Override
+                    public void run() {
+                        if(hours>0){
+                            txtTimeProgress.setText(""+hours+":"+minutes+":"+seconds);
+                        }else{
+                            txtTimeProgress.setText(""+minutes+":"+seconds);
+                        }
+
+                    }
+                });
+
+                progressBarTime.setProgress(currentPosition);
+
+            }catch (Exception e){
+                e.printStackTrace();
+                return;
+            }
+
+
+
+
+        }
+
+    }
+
+
 }
