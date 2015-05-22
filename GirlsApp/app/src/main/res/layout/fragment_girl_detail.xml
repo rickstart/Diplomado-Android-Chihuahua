@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mobintum.girlsapp.fragments.GirlDetailFragment">
+
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="2"
+       android:src="@mipmap/emma_watson"
+       android:id="@+id/imgPhoto"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:textSize="@dimen/font_title"
+        android:text="@string/hello_world"
+        android:gravity="center"
+        android:id="@+id/txtName"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:src="@mipmap/btn_site"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:id="@+id/btnSite"/>
+
+
+</LinearLayout>
