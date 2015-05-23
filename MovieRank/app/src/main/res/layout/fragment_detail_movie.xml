@@ -1,0 +1,63 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mobintum.movierank.fragments.DetailMovieFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/poster"
+            android:src="@mipmap/tmb_movie"
+            android:id="@+id/imgPoster"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_title"
+            android:gravity="center"
+            android:text="@string/hello_world"
+            android:id="@+id/txtTitleDetail"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_world"
+            android:id="@+id/txtRuntime"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_world"
+            android:id="@+id/txtCasting"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_world"
+            android:id="@+id/txtSynopsis"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/critic_score"
+            android:textSize="@dimen/font_medium"
+            />
+        <RatingBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingCritic"
+            android:numStars="5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/audience_score"
+            android:textSize="@dimen/font_medium"
+            />
+        <RatingBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingAudience"
+            android:numStars="5"/>
+     </LinearLayout>
+
+</ScrollView>

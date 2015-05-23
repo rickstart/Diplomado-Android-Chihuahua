@@ -45,6 +45,7 @@ public class WebViewFragment extends Fragment {
 
         WebView webViewPage = (WebView) view.findViewById(R.id.webViewPage);
         webViewPage.getSettings().setJavaScriptEnabled(true);
+
         webViewPage.setWebViewClient(new WebViewClient() {
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
                 Toast.makeText(getActivity(), description, Toast.LENGTH_SHORT).show();

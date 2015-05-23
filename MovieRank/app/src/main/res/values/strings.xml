@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MovieRank</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Buscar</string>
+    <string name="refresh">Cargando</string>
+    <string name="critic_score">Critic Score</string>
+    <string name="audience_score">Audience Score</string>
+</resources>
