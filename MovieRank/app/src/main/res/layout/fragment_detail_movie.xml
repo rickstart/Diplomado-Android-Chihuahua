@@ -12,6 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/poster"
             android:src="@mipmap/tmb_movie"
+            android:paddingBottom="@dimen/padding_small"
             android:id="@+id/imgPoster"/>
         <TextView
             android:layout_width="match_parent"
@@ -19,44 +20,80 @@
             android:textSize="@dimen/font_title"
             android:gravity="center"
             android:text="@string/hello_world"
+            android:paddingBottom="@dimen/padding_small"
             android:id="@+id/txtTitleDetail"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/runtime"
+            android:gravity="center"
+            android:textSize="@dimen/font_medium"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/hello_world"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_small"
             android:id="@+id/txtRuntime"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/casting"
+            android:gravity="center"
+            android:textSize="@dimen/font_medium"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/hello_world"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_small"
             android:id="@+id/txtCasting"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/synopsis"
+            android:gravity="center"
+            android:textSize="@dimen/font_medium"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/hello_world"
+            android:gravity="center"
             android:id="@+id/txtSynopsis"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/critic_score"
+            android:gravity="center"
             android:textSize="@dimen/font_medium"
             />
         <RatingBar
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ratingCritic"
+            android:layout_gravity="center"
+            style="?android:attr/ratingBarStyleIndicator"
             android:numStars="5"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/audience_score"
+            android:gravity="center"
             android:textSize="@dimen/font_medium"
             />
         <RatingBar
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ratingAudience"
+            android:layout_gravity="center"
+            style="?android:attr/ratingBarStyleIndicator"
             android:numStars="5"/>
      </LinearLayout>
 

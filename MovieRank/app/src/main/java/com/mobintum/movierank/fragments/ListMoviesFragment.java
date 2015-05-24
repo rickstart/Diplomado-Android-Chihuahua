@@ -41,7 +41,7 @@ public class ListMoviesFragment extends Fragment {
     private Context context;
     private ListView listMovies;
     private Menu menu;
-    private ArrayList<Movie> movies;
+    private ArrayList<Movie> movies = new ArrayList<Movie>();
 
     private OnFragmentInteractionListener mListener;
 
@@ -59,7 +59,8 @@ public class ListMoviesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list_movies, container, false);
         setRefreshActionButtonState(false);
         listMovies = (ListView) view.findViewById(R.id.listMovies);
-
+        adapter = new MovieAdapter(context,R.layout.item_list_movie,movies);
+        listMovies.setAdapter(adapter);
         listMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -185,8 +186,9 @@ public class ListMoviesFragment extends Fragment {
                 Log.e("JSON", response);
 
                 movies = Movie.parseJson(response);
-                adapter = new MovieAdapter(context,R.layout.item_list_movie,movies);
-                listMovies.setAdapter(adapter);
+                adapter.clear();
+                adapter.addAll(movies);
+                adapter.notifyDataSetChanged();
             }
 
         }

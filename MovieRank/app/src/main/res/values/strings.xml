@@ -10,4 +10,7 @@
     <string name="refresh">Cargando</string>
     <string name="critic_score">Critic Score</string>
     <string name="audience_score">Audience Score</string>
+    <string name="runtime">Duración</string>
+    <string name="casting">Casting</string>
+    <string name="synopsis">Sinopsis</string>
 </resources>
