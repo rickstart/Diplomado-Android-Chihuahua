@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mobintum.maincity.R;
+import com.mobintum.maincity.fragments.CityDetailFragment;
 import com.mobintum.maincity.fragments.NavigationDrawerFragment;
 import com.mobintum.maincity.models.City;
 
@@ -39,11 +40,12 @@ public class MainActivity extends ActionBarActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         cities.add(new City(48.860327, 2.342425,"Paris","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQn0X5TyNRAHifOpCF7dQNXmt3dFMY5HHHq_IIEIVTU6LnnuaB"));
         cities.add(new City(40.717626, -73.997534,"New York","http://cache.graphicslib.viator.com/graphicslib/thumbs674x446/2625/SITours/new-york-city-in-one-day-small-group-sightseeing-tour-in-new-york-city-147596.jpg"));
         cities.add(new City(37.784513, -122.405079,"San Francisco","https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS2XDhxWrqYlHgeGYVP-xycedjruBzivTt5NUrL2RESditLhV4jBQ"));
+        setContentView(R.layout.activity_main);
+
+
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
@@ -56,10 +58,10 @@ public class MainActivity extends ActionBarActivity
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
-        // update the main content by replacing fragments
+
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                .replace(R.id.container, CityDetailFragment.newInstance(cities.get(position)))
                 .commit();
     }
 

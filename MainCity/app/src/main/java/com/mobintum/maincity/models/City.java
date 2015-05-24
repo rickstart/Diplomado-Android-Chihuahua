@@ -1,9 +1,11 @@
 package com.mobintum.maincity.models;
 
+import java.io.Serializable;
+
 /**
  * Created by Rick on 24/05/15.
  */
-public class City {
+public class City implements Serializable{
     private double latitude;
     private double longitude;
     private String nameCity;
